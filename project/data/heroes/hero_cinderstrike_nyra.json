@@ -1,0 +1,14 @@
+{
+  "id": "cinderstrike_nyra",
+  "name": "Cinderstrike Nyra",
+  "rarity": "Elite",
+  "role": "Ranger",
+  "faction": "Ember Court",
+  "base_stats": { "hp": 980, "attack": 168, "defense": 48, "speed": 108 },
+  "growth": { "hp": 90, "attack": 15, "defense": 4, "speed": 2 },
+  "ultimate_id": "embershot_volley",
+  "ultimate_name": "Embershot Volley",
+  "ultimate_description": "Launches a blazing spread of arrows that peppers the enemy backline.",
+  "portrait": { "glyph": "CN", "accent": "#E06B42" },
+  "lore": "A duelist archer who turns the battlefield into a string of controlled detonations."
+}

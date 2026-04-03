@@ -1,0 +1,14 @@
+{
+  "id": "ironclad_brann",
+  "name": "Ironclad Brann",
+  "rarity": "Rare",
+  "role": "Tank",
+  "faction": "Ironcrest",
+  "base_stats": { "hp": 1685, "attack": 108, "defense": 104, "speed": 82 },
+  "growth": { "hp": 162, "attack": 9, "defense": 9, "speed": 1 },
+  "ultimate_id": "forgebreaker_roar",
+  "ultimate_name": "Forgebreaker Roar",
+  "ultimate_description": "Lets out a smithing roar that steels allies and staggers nearby foes.",
+  "portrait": { "glyph": "IB", "accent": "#8293A1" },
+  "lore": "A veteran bulwark who treats every charge like an anvil waiting to be split."
+}

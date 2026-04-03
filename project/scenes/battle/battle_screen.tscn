@@ -1,0 +1,166 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://project/scripts/battle/battle_screen.gd" id="1"]
+
+[node name="BattleScreen" type="ScrollContainer"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+script = ExtResource("1")
+
+[node name="Content" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(960, 0)
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Stack" type="VBoxContainer" parent="Content"]
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="SummaryPanel" type="PanelContainer" parent="Content/Stack"]
+
+[node name="SummaryMargin" type="MarginContainer" parent="Content/Stack/SummaryPanel"]
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="SummaryStack" type="VBoxContainer" parent="Content/Stack/SummaryPanel/SummaryMargin"]
+theme_override_constants/separation = 10
+
+[node name="EncounterTitleLabel" type="Label" parent="Content/Stack/SummaryPanel/SummaryMargin/SummaryStack"]
+unique_name_in_owner = true
+text = "Battle"
+
+[node name="BattleStateLabel" type="Label" parent="Content/Stack/SummaryPanel/SummaryMargin/SummaryStack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
+
+[node name="FormationSummaryLabel" type="Label" parent="Content/Stack/SummaryPanel/SummaryMargin/SummaryStack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
+
+[node name="ControlsPanel" type="PanelContainer" parent="Content/Stack"]
+
+[node name="ControlsMargin" type="MarginContainer" parent="Content/Stack/ControlsPanel"]
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ControlsStack" type="VBoxContainer" parent="Content/Stack/ControlsPanel/ControlsMargin"]
+theme_override_constants/separation = 12
+
+[node name="ControlRow" type="HBoxContainer" parent="Content/Stack/ControlsPanel/ControlsMargin/ControlsStack"]
+theme_override_constants/separation = 12
+
+[node name="RestartButton" type="Button" parent="Content/Stack/ControlsPanel/ControlsMargin/ControlsStack/ControlRow"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 92)
+text = "Restart Battle"
+
+[node name="SpeedButton" type="Button" parent="Content/Stack/ControlsPanel/ControlsMargin/ControlsStack/ControlRow"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 92)
+text = "Speed 1x"
+
+[node name="FormationButton" type="Button" parent="Content/Stack/ControlsPanel/ControlsMargin/ControlsStack/ControlRow"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 92)
+text = "Open Formation"
+
+[node name="TimerLabel" type="Label" parent="Content/Stack/ControlsPanel/ControlsMargin/ControlsStack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
+
+[node name="DeterminismLabel" type="Label" parent="Content/Stack/ControlsPanel/ControlsMargin/ControlsStack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
+
+[node name="ArenaPanel" type="PanelContainer" parent="Content/Stack"]
+
+[node name="ArenaMargin" type="MarginContainer" parent="Content/Stack/ArenaPanel"]
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ArenaStack" type="VBoxContainer" parent="Content/Stack/ArenaPanel/ArenaMargin"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="ArenaHeaderRow" type="HBoxContainer" parent="Content/Stack/ArenaPanel/ArenaMargin/ArenaStack"]
+theme_override_constants/separation = 12
+
+[node name="PlayerTeamLabel" type="Label" parent="Content/Stack/ArenaPanel/ArenaMargin/ArenaStack/ArenaHeaderRow"]
+size_flags_horizontal = 3
+text = "Allied Team"
+
+[node name="LaneHeaderLabel" type="Label" parent="Content/Stack/ArenaPanel/ArenaMargin/ArenaStack/ArenaHeaderRow"]
+custom_minimum_size = Vector2(160, 0)
+horizontal_alignment = 1
+text = "Lane"
+
+[node name="EnemyTeamLabel" type="Label" parent="Content/Stack/ArenaPanel/ArenaMargin/ArenaStack/ArenaHeaderRow"]
+size_flags_horizontal = 3
+horizontal_alignment = 2
+text = "Enemy Team"
+
+[node name="ArenaRows" type="VBoxContainer" parent="Content/Stack/ArenaPanel/ArenaMargin/ArenaStack"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="ResultPanel" type="PanelContainer" parent="Content/Stack"]
+unique_name_in_owner = true
+visible = false
+
+[node name="ResultMargin" type="MarginContainer" parent="Content/Stack/ResultPanel"]
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ResultStack" type="VBoxContainer" parent="Content/Stack/ResultPanel/ResultMargin"]
+theme_override_constants/separation = 10
+
+[node name="ResultLabel" type="Label" parent="Content/Stack/ResultPanel/ResultMargin/ResultStack"]
+unique_name_in_owner = true
+text = "Result"
+
+[node name="ResultDetailLabel" type="Label" parent="Content/Stack/ResultPanel/ResultMargin/ResultStack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
+
+[node name="LogPanel" type="PanelContainer" parent="Content/Stack"]
+
+[node name="LogMargin" type="MarginContainer" parent="Content/Stack/LogPanel"]
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="LogStack" type="VBoxContainer" parent="Content/Stack/LogPanel/LogMargin"]
+theme_override_constants/separation = 12
+
+[node name="LogTitleLabel" type="Label" parent="Content/Stack/LogPanel/LogMargin/LogStack"]
+text = "Combat Log"
+
+[node name="CombatLog" type="RichTextLabel" parent="Content/Stack/LogPanel/LogMargin/LogStack"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 320)
+size_flags_horizontal = 3
+bbcode_enabled = false
+scroll_following = true

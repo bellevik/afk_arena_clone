@@ -1,0 +1,37 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Shardfall Legends"
+config/description="An original mobile-first idle hero battler prototype built phase by phase."
+run/main_scene="res://project/scenes/boot/boot.tscn"
+config/features=PackedStringArray("4.3")
+boot_splash/show_image=false
+
+[autoload]
+
+AppState="*res://project/scripts/core/app_state.gd"
+GameData="*res://project/scripts/data/game_data.gd"
+ProfileState="*res://project/scripts/core/profile_state.gd"
+FormationState="*res://project/scripts/core/formation_state.gd"
+SceneRouter="*res://project/scripts/core/scene_router.gd"
+ThemeManager="*res://project/scripts/ui/theme_manager.gd"
+DebugTools="*res://project/scripts/debug/debug_tools.gd"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/stretch/mode="canvas_items"
+
+[rendering]
+
+renderer/rendering_method="mobile"

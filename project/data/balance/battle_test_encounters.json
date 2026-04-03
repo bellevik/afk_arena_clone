@@ -1,0 +1,18 @@
+{
+  "default_encounter_id": "field_trial_alpha",
+  "encounters": [
+    {
+      "id": "field_trial_alpha",
+      "name": "Field Trial Alpha",
+      "description": "A balanced skirmish used to validate the deterministic battle foundation.",
+      "duration_seconds": 60,
+      "enemy_team": [
+        { "slot_id": "front_left", "enemy_id": "grave_warden", "level": 1 },
+        { "slot_id": "front_right", "enemy_id": "ember_husk", "level": 1 },
+        { "slot_id": "back_left", "enemy_id": "tide_scout", "level": 1 },
+        { "slot_id": "back_center", "enemy_id": "ember_husk", "level": 1 },
+        { "slot_id": "back_right", "enemy_id": "tide_scout", "level": 1 }
+      ]
+    }
+  ]
+}

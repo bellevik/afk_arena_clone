@@ -1,0 +1,14 @@
+{
+  "id": "tidecaller_serin",
+  "name": "Tidecaller Serin",
+  "rarity": "Legendary",
+  "role": "Support",
+  "faction": "Tideborn",
+  "base_stats": { "hp": 1115, "attack": 134, "defense": 62, "speed": 98 },
+  "growth": { "hp": 102, "attack": 11, "defense": 5, "speed": 2 },
+  "ultimate_id": "moonwake_chorus",
+  "ultimate_name": "Moonwake Chorus",
+  "ultimate_description": "Summons a restorative tide that surges through allies and stabilizes the formation.",
+  "portrait": { "glyph": "TS", "accent": "#4E9FDB" },
+  "lore": "A harbor mystic whose songs can calm storms and raise wavering spirits."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "tide_scout",
+  "name": "Tide Scout",
+  "role": "Ranger",
+  "faction": "Tideborn",
+  "base_stats": { "hp": 1020, "attack": 146, "defense": 48, "speed": 106 },
+  "growth": { "hp": 95, "attack": 13, "defense": 4, "speed": 2 },
+  "portrait": { "glyph": "TS", "accent": "#4598C4" },
+  "notes": "Ranged enemy prototype for early stage composition data."
+}

@@ -1,0 +1,14 @@
+{
+  "id": "aurelian_guard",
+  "name": "Aurelian Guard",
+  "rarity": "Elite",
+  "role": "Tank",
+  "faction": "Solaris",
+  "base_stats": { "hp": 1560, "attack": 118, "defense": 96, "speed": 88 },
+  "growth": { "hp": 150, "attack": 10, "defense": 8, "speed": 1 },
+  "ultimate_id": "solar_bastion",
+  "ultimate_name": "Solar Bastion",
+  "ultimate_description": "Raises a radiant wall, then crashes it into the frontline with a shield bash.",
+  "portrait": { "glyph": "AG", "accent": "#D5A44F" },
+  "lore": "A disciplined vanguard who plants the line and refuses to yield ground."
+}

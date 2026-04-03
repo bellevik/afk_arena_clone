@@ -1,0 +1,14 @@
+{
+  "id": "rune_scribe_elowen",
+  "name": "Rune Scribe Elowen",
+  "rarity": "Elite",
+  "role": "Mage",
+  "faction": "Verdant Circle",
+  "base_stats": { "hp": 990, "attack": 176, "defense": 46, "speed": 100 },
+  "growth": { "hp": 92, "attack": 16, "defense": 4, "speed": 2 },
+  "ultimate_id": "verdant_array",
+  "ultimate_name": "Verdant Array",
+  "ultimate_description": "Unfolds a lattice of runes that erupts across multiple enemy positions.",
+  "portrait": { "glyph": "RE", "accent": "#6EBE78" },
+  "lore": "A runic botanist who binds old growth and precise spellwork into one cadence."
+}

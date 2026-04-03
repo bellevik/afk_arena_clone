@@ -1,0 +1,14 @@
+{
+  "id": "duskwisp_iona",
+  "name": "Duskwisp Iona",
+  "rarity": "Legendary",
+  "role": "Mage",
+  "faction": "Umbral",
+  "base_stats": { "hp": 1025, "attack": 184, "defense": 50, "speed": 102 },
+  "growth": { "hp": 95, "attack": 17, "defense": 4, "speed": 2 },
+  "ultimate_id": "midnight_comet",
+  "ultimate_name": "Midnight Comet",
+  "ultimate_description": "Condenses shadowfire into a comet that detonates on the densest cluster.",
+  "portrait": { "glyph": "DI", "accent": "#7C68D8" },
+  "lore": "An eclipse scholar who bends fading starlight into destructive sigils."
+}

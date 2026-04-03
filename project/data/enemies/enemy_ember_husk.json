@@ -1,0 +1,10 @@
+{
+  "id": "ember_husk",
+  "name": "Ember Husk",
+  "role": "Warrior",
+  "faction": "Ember Court",
+  "base_stats": { "hp": 1180, "attack": 132, "defense": 60, "speed": 94 },
+  "growth": { "hp": 110, "attack": 11, "defense": 5, "speed": 1 },
+  "portrait": { "glyph": "EH", "accent": "#D36A40" },
+  "notes": "Starter melee enemy for early campaign data and battle tests."
+}

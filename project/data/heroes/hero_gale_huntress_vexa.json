@@ -1,0 +1,14 @@
+{
+  "id": "gale_huntress_vexa",
+  "name": "Gale Huntress Vexa",
+  "rarity": "Elite",
+  "role": "Ranger",
+  "faction": "Sky Dominion",
+  "base_stats": { "hp": 1040, "attack": 162, "defense": 52, "speed": 112 },
+  "growth": { "hp": 92, "attack": 14, "defense": 4, "speed": 2 },
+  "ultimate_id": "razorwind_arc",
+  "ultimate_name": "Razorwind Arc",
+  "ultimate_description": "Cuts a sweeping crescent of wind through enemies from front to back.",
+  "portrait": { "glyph": "GV", "accent": "#56B6D9" },
+  "lore": "A skyfleet tracker whose shots arrive before her prey hears the wind."
+}

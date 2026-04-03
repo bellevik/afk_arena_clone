@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1fewu1eulbig"]
+
+[ext_resource type="Script" path="res://project/scripts/core/boot.gd" id="1"]
+[ext_resource type="Theme" uid="uid://kfe8bx4ptlec" path="res://project/assets/ui/theme/ui_theme.tres" id="2"]
+
+[node name="Boot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2")
+script = ExtResource("1")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0627451, 0.0901961, 0.14902, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BootCard" type="PanelContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(720, 320)
+layout_mode = 2
+
+[node name="Padding" type="MarginContainer" parent="CenterContainer/BootCard"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="Content" type="VBoxContainer" parent="CenterContainer/BootCard/Padding"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="GameTitle" type="Label" parent="CenterContainer/BootCard/Padding/Content"]
+layout_mode = 2
+text = "Shardfall Legends"
+horizontal_alignment = 1
+
+[node name="PhaseLabel" type="Label" parent="CenterContainer/BootCard/Padding/Content"]
+layout_mode = 2
+text = "Phase 1 foundation build"
+horizontal_alignment = 1
+
+[node name="StatusLabel" type="Label" parent="CenterContainer/BootCard/Padding/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Loading..."
+horizontal_alignment = 1

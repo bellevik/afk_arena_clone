@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://project/scripts/ui/placeholder_screen.gd" id="1"]
+
+[node name="PlaceholderScreen" type="ScrollContainer"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+script = ExtResource("1")
+
+[node name="Content" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(960, 0)
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Stack" type="VBoxContainer" parent="Content"]
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="HeroPanel" type="PanelContainer" parent="Content/Stack"]
+
+[node name="HeroMargin" type="MarginContainer" parent="Content/Stack/HeroPanel"]
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="HeroStack" type="VBoxContainer" parent="Content/Stack/HeroPanel/HeroMargin"]
+theme_override_constants/separation = 12
+
+[node name="PlaceholderTitle" type="Label" parent="Content/Stack/HeroPanel/HeroMargin/HeroStack"]
+unique_name_in_owner = true
+text = "Placeholder"
+
+[node name="PlaceholderSubtitle" type="Label" parent="Content/Stack/HeroPanel/HeroMargin/HeroStack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
+
+[node name="PlaceholderBody" type="Label" parent="Content/Stack/HeroPanel/HeroMargin/HeroStack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
+
+[node name="StatusPanel" type="PanelContainer" parent="Content/Stack"]
+
+[node name="StatusMargin" type="MarginContainer" parent="Content/Stack/StatusPanel"]
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="PlaceholderStatus" type="Label" parent="Content/Stack/StatusPanel/StatusMargin"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
+
+[node name="BackButton" type="Button" parent="Content/Stack"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 100)
+size_flags_horizontal = 10
+text = "Back to Main Menu"
