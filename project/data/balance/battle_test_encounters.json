@@ -13,6 +13,19 @@
         { "slot_id": "back_center", "enemy_id": "ember_husk", "level": 1 },
         { "slot_id": "back_right", "enemy_id": "tide_scout", "level": 1 }
       ]
+    },
+    {
+      "id": "field_trial_bravo",
+      "name": "Field Trial Bravo",
+      "description": "A later-game mixed-arms test encounter that samples the expanded Chapter 2 enemy roster.",
+      "duration_seconds": 75,
+      "enemy_team": [
+        { "slot_id": "front_left", "enemy_id": "bog_shambler", "level": 4 },
+        { "slot_id": "front_right", "enemy_id": "grave_warden", "level": 4 },
+        { "slot_id": "back_left", "enemy_id": "storm_lancer", "level": 4 },
+        { "slot_id": "back_center", "enemy_id": "ashen_seer", "level": 4 },
+        { "slot_id": "back_right", "enemy_id": "tide_scout", "level": 4 }
+      ]
     }
   ]
 }

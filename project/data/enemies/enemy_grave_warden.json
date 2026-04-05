@@ -5,6 +5,9 @@
   "faction": "Umbral",
   "base_stats": { "hp": 1490, "attack": 102, "defense": 90, "speed": 80 },
   "growth": { "hp": 142, "attack": 9, "defense": 8, "speed": 1 },
+  "ultimate_id": "sepulcher_guard",
+  "ultimate_name": "Sepulcher Guard",
+  "ultimate_description": "Raises a tombshield, then drives it through the frontline while fortifying itself.",
   "portrait": { "glyph": "GW", "accent": "#70658A" },
   "notes": "Durable enemy shell for later frontline testing."
 }

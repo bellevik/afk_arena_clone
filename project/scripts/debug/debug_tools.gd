@@ -38,3 +38,37 @@ func open_screen(screen_id: String) -> void:
 		SceneRouter.go_to(screen_id)
 		set_menu_open(false)
 
+
+func save_game() -> void:
+	SaveState.save_game()
+
+
+func reload_game() -> void:
+	SaveState.load_game()
+
+
+func reset_save() -> void:
+	SaveState.reset_save()
+	reset_navigation()
+
+
+func grant_debug_resources() -> void:
+	RewardState.grant_resources({
+		"gold": 5000,
+		"hero_xp": 5000,
+		"premium_shards": 1500,
+		"rally_sigil": 10,
+		"astral_sigil": 10,
+	})
+
+
+func unlock_all_stages() -> void:
+	CampaignState.unlock_all_stages_for_debug()
+
+
+func instant_level_up_all_heroes() -> void:
+	ProfileState.cap_all_heroes_for_debug()
+
+
+func grant_event_progress() -> void:
+	EventState.debug_grant_points_to_active_event()

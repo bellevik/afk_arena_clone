@@ -1,0 +1,94 @@
+{
+  "quests": [
+    {
+      "id": "quest_campaign_push",
+      "name": "Campaign Push",
+      "description": "Clear 3 campaign stages to prove the roster can keep advancing.",
+      "cadence": "milestone",
+      "event_type": "stage_clear",
+      "target_count": 3,
+      "rewards": { "gold": 300, "hero_xp": 180 }
+    },
+    {
+      "id": "quest_repeat_victories",
+      "name": "Field Commander",
+      "description": "Win 5 battles from any source.",
+      "cadence": "milestone",
+      "event_type": "battle_win",
+      "target_count": 5,
+      "rewards": { "gold": 420, "hero_xp": 220 }
+    },
+    {
+      "id": "quest_growth_training",
+      "name": "Growth Training",
+      "description": "Level heroes up 4 times.",
+      "cadence": "milestone",
+      "event_type": "hero_level_up",
+      "target_count": 4,
+      "rewards": { "gold": 350, "hero_xp": 260 }
+    },
+    {
+      "id": "quest_banner_cycle",
+      "name": "Banner Cycle",
+      "description": "Perform 10 summon pulls.",
+      "cadence": "milestone",
+      "event_type": "summon_pull",
+      "target_count": 10,
+      "rewards": { "gold": 280, "hero_xp": 240 }
+    },
+    {
+      "id": "quest_idle_collector",
+      "name": "Idle Collector",
+      "description": "Claim AFK rewards 2 times.",
+      "cadence": "milestone",
+      "event_type": "afk_claim",
+      "target_count": 2,
+      "rewards": { "gold": 260, "hero_xp": 200 }
+    },
+    {
+      "id": "quest_daily_patrol",
+      "name": "Daily Patrol",
+      "description": "Win 3 battles during the current daily cycle.",
+      "cadence": "daily",
+      "event_type": "battle_win",
+      "target_count": 3,
+      "rewards": { "gold": 180, "hero_xp": 120, "premium_shards": 20 }
+    },
+    {
+      "id": "quest_daily_idle_check",
+      "name": "Daily Idle Check",
+      "description": "Claim AFK rewards once during the current daily cycle.",
+      "cadence": "daily",
+      "event_type": "afk_claim",
+      "target_count": 1,
+      "rewards": { "gold": 140, "hero_xp": 100, "premium_shards": 15 }
+    },
+    {
+      "id": "quest_daily_growth_spurt",
+      "name": "Daily Growth Spurt",
+      "description": "Level heroes up 2 times during the current daily cycle.",
+      "cadence": "daily",
+      "event_type": "hero_level_up",
+      "target_count": 2,
+      "rewards": { "gold": 170, "hero_xp": 140, "premium_shards": 20 }
+    },
+    {
+      "id": "quest_weekly_frontier",
+      "name": "Weekly Frontier",
+      "description": "Clear 8 campaign stages during the current weekly cycle.",
+      "cadence": "weekly",
+      "event_type": "stage_clear",
+      "target_count": 8,
+      "rewards": { "gold": 720, "hero_xp": 520, "premium_shards": 80 }
+    },
+    {
+      "id": "quest_weekly_banner_surge",
+      "name": "Weekly Banner Surge",
+      "description": "Perform 20 summon pulls during the current weekly cycle.",
+      "cadence": "weekly",
+      "event_type": "summon_pull",
+      "target_count": 20,
+      "rewards": { "gold": 760, "hero_xp": 560, "premium_shards": 100 }
+    }
+  ]
+}

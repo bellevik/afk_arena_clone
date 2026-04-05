@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "id": "bronze_blade",
+      "name": "Bronze Blade",
+      "slot_type": "weapon",
+      "rarity": "Common",
+      "starting_count": 2,
+      "stat_bonuses": { "hp": 0, "attack": 26, "defense": 0, "speed": 0 },
+      "lore": "A sturdy starter sword that raises a hero's direct damage output."
+    },
+    {
+      "id": "sunforged_spear",
+      "name": "Sunforged Spear",
+      "slot_type": "weapon",
+      "rarity": "Rare",
+      "starting_count": 1,
+      "stat_bonuses": { "hp": 0, "attack": 34, "defense": 0, "speed": 6 },
+      "lore": "A balanced spear favored by aggressive frontliners."
+    },
+    {
+      "id": "wardsteel_cuirass",
+      "name": "Wardsteel Cuirass",
+      "slot_type": "armor",
+      "rarity": "Common",
+      "starting_count": 2,
+      "stat_bonuses": { "hp": 220, "attack": 0, "defense": 18, "speed": 0 },
+      "lore": "Layered plate that improves survivability without altering tempo."
+    },
+    {
+      "id": "trailcloak",
+      "name": "Trailcloak",
+      "slot_type": "armor",
+      "rarity": "Rare",
+      "starting_count": 1,
+      "stat_bonuses": { "hp": 120, "attack": 0, "defense": 10, "speed": 10 },
+      "lore": "A light mantle that trades raw durability for faster rotations."
+    },
+    {
+      "id": "ember_charm",
+      "name": "Ember Charm",
+      "slot_type": "accessory",
+      "rarity": "Common",
+      "starting_count": 2,
+      "stat_bonuses": { "hp": 80, "attack": 14, "defense": 0, "speed": 4 },
+      "lore": "A glowing charm that adds a small all-purpose boost."
+    },
+    {
+      "id": "tideband_ring",
+      "name": "Tideband Ring",
+      "slot_type": "accessory",
+      "rarity": "Rare",
+      "starting_count": 1,
+      "stat_bonuses": { "hp": 140, "attack": 8, "defense": 8, "speed": 8 },
+      "lore": "A polished ring that smooths out offense, defense, and tempo."
+    }
+  ]
+}

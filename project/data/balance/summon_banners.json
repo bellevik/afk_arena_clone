@@ -1,0 +1,59 @@
+{
+  "default_banner_id": "vanguard_rally",
+  "banners": [
+    {
+      "id": "vanguard_rally",
+      "name": "Vanguard Rally",
+      "description": "A frontline-focused banner tuned for stable campaign progress and early team anchors.",
+      "currency_id": "rally_sigil",
+      "currency_name": "Rally Sigils",
+      "cost_currency": 1,
+      "cost_currency_ten_pull": 10,
+      "exchange_shards_single": 120,
+      "exchange_shards_ten_pull": 1100,
+      "pity_threshold": 10,
+      "rarity_weights": {
+        "Legendary": 8,
+        "Elite": 42,
+        "Rare": 50
+      },
+      "featured_hero_ids": [
+        "aurelian_guard",
+        "rootwarden_kael",
+        "veilpriest_nema"
+      ],
+      "featured_bonus_weight": 3,
+      "fallback_rewards": {
+        "gold": 180,
+        "hero_xp": 120
+      }
+    },
+    {
+      "id": "astral_convergence",
+      "name": "Astral Convergence",
+      "description": "A higher-variance banner built around ranged damage spikes and late-fight ultimates.",
+      "currency_id": "astral_sigil",
+      "currency_name": "Astral Sigils",
+      "cost_currency": 1,
+      "cost_currency_ten_pull": 10,
+      "exchange_shards_single": 130,
+      "exchange_shards_ten_pull": 1200,
+      "pity_threshold": 10,
+      "rarity_weights": {
+        "Legendary": 10,
+        "Elite": 40,
+        "Rare": 50
+      },
+      "featured_hero_ids": [
+        "sunforge_lyra",
+        "stormshot_tarin",
+        "tidecaller_serin"
+      ],
+      "featured_bonus_weight": 4,
+      "fallback_rewards": {
+        "gold": 200,
+        "hero_xp": 130
+      }
+    }
+  ]
+}

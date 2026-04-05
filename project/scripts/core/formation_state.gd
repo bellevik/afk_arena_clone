@@ -24,12 +24,18 @@ var _assignments: Dictionary = {}
 func _ready() -> void:
 	if ProfileState.roster_changed.is_connected(_on_roster_changed) == false:
 		ProfileState.roster_changed.connect(_on_roster_changed)
+	if InventoryState.inventory_changed.is_connected(_on_inventory_changed) == false:
+		InventoryState.inventory_changed.connect(_on_inventory_changed)
 	_reset_missing_slots()
 	_prune_invalid_assignments()
 
 
 func _on_roster_changed() -> void:
 	_prune_invalid_assignments()
+
+
+func _on_inventory_changed() -> void:
+	formation_changed.emit()
 
 
 func slot_ids() -> Array[String]:
@@ -128,6 +134,38 @@ func clear_formation() -> void:
 		formation_changed.emit()
 
 
+func serialize_state() -> Dictionary:
+	return {
+		"assignments": _assignments.duplicate(true),
+	}
+
+
+func apply_state(data: Dictionary) -> void:
+	_reset_missing_slots()
+	var next_assignments: Dictionary = {}
+	var seen_heroes: Dictionary = {}
+	var incoming: Dictionary = data.get("assignments", {})
+	for slot_id in SLOT_ORDER:
+		var hero_id := String(incoming.get(slot_id, ""))
+		if hero_id.is_empty():
+			next_assignments[slot_id] = ""
+			continue
+		if ProfileState.has_hero(hero_id) == false or seen_heroes.has(hero_id):
+			next_assignments[slot_id] = ""
+			continue
+		seen_heroes[hero_id] = true
+		next_assignments[slot_id] = hero_id
+	_assignments = next_assignments
+	_reset_missing_slots()
+	formation_changed.emit()
+
+
+func reset_persistent_state() -> void:
+	_assignments.clear()
+	_reset_missing_slots()
+	formation_changed.emit()
+
+
 func auto_fill() -> void:
 	var available_heroes := ProfileState.owned_hero_ids()
 	var changed := false
@@ -153,19 +191,16 @@ func team_power() -> int:
 		if hero.is_empty():
 			continue
 
-		var level := ProfileState.hero_level(String(hero.get("hero_id", "")))
-		total += hero_power_for_entry(hero, level)
+		var hero_id := String(hero.get("hero_id", ""))
+		total += _power_from_stats(ProfileState.hero_stats(hero_id))
 	return total
 
 
 func hero_power_for_entry(hero: Dictionary, level: int) -> int:
-	var stats := GameData.hero_stats_for_level(hero, level)
-	return (
-		int(stats.get("hp", 0))
-		+ int(stats.get("attack", 0)) * 8
-		+ int(stats.get("defense", 0)) * 6
-		+ int(stats.get("speed", 0)) * 4
-	)
+	var hero_id := String(hero.get("hero_id", ""))
+	if hero_id.is_empty():
+		return _power_from_stats(GameData.hero_stats_for_level(hero, level))
+	return _power_from_stats(ProfileState.hero_stats(hero_id))
 
 
 func selection_entries() -> Array[Dictionary]:
@@ -225,3 +260,12 @@ func _count_line_assignments(line_name: String) -> int:
 		if get_assigned_hero_id(slot_id).is_empty() == false:
 			count += 1
 	return count
+
+
+func _power_from_stats(stats: Dictionary) -> int:
+	return (
+		int(stats.get("hp", 0))
+		+ int(stats.get("attack", 0)) * 8
+		+ int(stats.get("defense", 0)) * 6
+		+ int(stats.get("speed", 0)) * 4
+	)

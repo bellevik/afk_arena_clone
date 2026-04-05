@@ -1,0 +1,182 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://project/scripts/ui/settings_screen.gd" id="1"]
+
+[node name="SettingsScreen" type="ScrollContainer"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+script = ExtResource("1")
+
+[node name="Content" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(960, 0)
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Stack" type="VBoxContainer" parent="Content"]
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="SummaryPanel" type="PanelContainer" parent="Content/Stack"]
+
+[node name="SummaryMargin" type="MarginContainer" parent="Content/Stack/SummaryPanel"]
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="SummaryStack" type="VBoxContainer" parent="Content/Stack/SummaryPanel/SummaryMargin"]
+theme_override_constants/separation = 12
+
+[node name="SettingsSummaryLabel" type="Label" parent="Content/Stack/SummaryPanel/SummaryMargin/SummaryStack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
+
+[node name="SaveStatusLabel" type="Label" parent="Content/Stack/SummaryPanel/SummaryMargin/SummaryStack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
+
+[node name="InteractionPanel" type="PanelContainer" parent="Content/Stack"]
+
+[node name="InteractionMargin" type="MarginContainer" parent="Content/Stack/InteractionPanel"]
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="InteractionStack" type="VBoxContainer" parent="Content/Stack/InteractionPanel/InteractionMargin"]
+theme_override_constants/separation = 14
+
+[node name="InteractionTitle" type="Label" parent="Content/Stack/InteractionPanel/InteractionMargin/InteractionStack"]
+text = "Interface"
+
+[node name="TransitionsToggle" type="CheckButton" parent="Content/Stack/InteractionPanel/InteractionMargin/InteractionStack"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 88)
+text = "Enable route transitions"
+button_pressed = true
+
+[node name="FeedbackToggle" type="CheckButton" parent="Content/Stack/InteractionPanel/InteractionMargin/InteractionStack"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 88)
+text = "Enable button feedback"
+button_pressed = true
+
+[node name="AudioPanel" type="PanelContainer" parent="Content/Stack"]
+
+[node name="AudioMargin" type="MarginContainer" parent="Content/Stack/AudioPanel"]
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="AudioStack" type="VBoxContainer" parent="Content/Stack/AudioPanel/AudioMargin"]
+theme_override_constants/separation = 14
+
+[node name="AudioTitle" type="Label" parent="Content/Stack/AudioPanel/AudioMargin/AudioStack"]
+text = "Audio Preferences"
+
+[node name="MasterRow" type="HBoxContainer" parent="Content/Stack/AudioPanel/AudioMargin/AudioStack"]
+theme_override_constants/separation = 16
+
+[node name="MasterLabel" type="Label" parent="Content/Stack/AudioPanel/AudioMargin/AudioStack/MasterRow"]
+custom_minimum_size = Vector2(180, 0)
+text = "Master"
+
+[node name="MasterSlider" type="HSlider" parent="Content/Stack/AudioPanel/AudioMargin/AudioStack/MasterRow"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="MasterValueLabel" type="Label" parent="Content/Stack/AudioPanel/AudioMargin/AudioStack/MasterRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 0)
+horizontal_alignment = 2
+text = "100%"
+
+[node name="MusicRow" type="HBoxContainer" parent="Content/Stack/AudioPanel/AudioMargin/AudioStack"]
+theme_override_constants/separation = 16
+
+[node name="MusicLabel" type="Label" parent="Content/Stack/AudioPanel/AudioMargin/AudioStack/MusicRow"]
+custom_minimum_size = Vector2(180, 0)
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="Content/Stack/AudioPanel/AudioMargin/AudioStack/MusicRow"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+value = 0.8
+
+[node name="MusicValueLabel" type="Label" parent="Content/Stack/AudioPanel/AudioMargin/AudioStack/MusicRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 0)
+horizontal_alignment = 2
+text = "80%"
+
+[node name="SfxRow" type="HBoxContainer" parent="Content/Stack/AudioPanel/AudioMargin/AudioStack"]
+theme_override_constants/separation = 16
+
+[node name="SfxLabel" type="Label" parent="Content/Stack/AudioPanel/AudioMargin/AudioStack/SfxRow"]
+custom_minimum_size = Vector2(180, 0)
+text = "SFX"
+
+[node name="SfxSlider" type="HSlider" parent="Content/Stack/AudioPanel/AudioMargin/AudioStack/SfxRow"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+value = 0.85
+
+[node name="SfxValueLabel" type="Label" parent="Content/Stack/AudioPanel/AudioMargin/AudioStack/SfxRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 0)
+horizontal_alignment = 2
+text = "85%"
+
+[node name="SavePanel" type="PanelContainer" parent="Content/Stack"]
+
+[node name="SaveMargin" type="MarginContainer" parent="Content/Stack/SavePanel"]
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="SaveStack" type="VBoxContainer" parent="Content/Stack/SavePanel/SaveMargin"]
+theme_override_constants/separation = 14
+
+[node name="SaveTitle" type="Label" parent="Content/Stack/SavePanel/SaveMargin/SaveStack"]
+text = "Save And Recovery"
+
+[node name="SaveRow" type="HBoxContainer" parent="Content/Stack/SavePanel/SaveMargin/SaveStack"]
+theme_override_constants/separation = 14
+
+[node name="SaveButton" type="Button" parent="Content/Stack/SavePanel/SaveMargin/SaveStack/SaveRow"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 96)
+text = "Save Now"
+
+[node name="ReloadButton" type="Button" parent="Content/Stack/SavePanel/SaveMargin/SaveStack/SaveRow"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 96)
+text = "Reload Save"
+
+[node name="ResetButton" type="Button" parent="Content/Stack/SavePanel/SaveMargin/SaveStack/SaveRow"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 96)
+text = "Reset Save"
+
+[node name="DebugButton" type="Button" parent="Content/Stack/SavePanel/SaveMargin/SaveStack"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 88)
+text = "Open Debug Overlay"

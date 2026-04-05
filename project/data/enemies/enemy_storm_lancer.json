@@ -1,0 +1,13 @@
+{
+  "id": "storm_lancer",
+  "name": "Storm Lancer",
+  "role": "Ranger",
+  "faction": "Sky Dominion",
+  "base_stats": { "hp": 1090, "attack": 142, "defense": 58, "speed": 106 },
+  "growth": { "hp": 102, "attack": 11, "defense": 5, "speed": 2 },
+  "ultimate_id": "squall_barrage",
+  "ultimate_name": "Squall Barrage",
+  "ultimate_description": "A burst of charged lances that crashes through the weakest backline targets.",
+  "portrait": { "glyph": "SL", "accent": "#5BAFD5" },
+  "notes": "Fast backline pressure unit used for later campaign stage compositions."
+}

@@ -1,4 +1,4 @@
-extends Control
+extends ScrollContainer
 
 var _selected_slot_id: String = "front_left"
 var _slot_buttons: Dictionary = {}

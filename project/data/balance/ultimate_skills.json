@@ -1,0 +1,131 @@
+{
+  "skills": [
+    {
+      "id": "solar_bastion",
+      "name": "Solar Bastion",
+      "effect_type": "frontline_bash",
+      "damage_scale": 1.25,
+      "shield_scale": 0.28,
+      "target_count": 2
+    },
+    {
+      "id": "embershot_volley",
+      "name": "Embershot Volley",
+      "effect_type": "backline_volley",
+      "damage_scale": 1.1,
+      "target_count": 3
+    },
+    {
+      "id": "midnight_comet",
+      "name": "Midnight Comet",
+      "effect_type": "all_enemy_blast",
+      "damage_scale": 1.2
+    },
+    {
+      "id": "razorwind_arc",
+      "name": "Razorwind Arc",
+      "effect_type": "sweeping_arc",
+      "damage_scale": 1.0,
+      "target_count": 3
+    },
+    {
+      "id": "forgebreaker_roar",
+      "name": "Forgebreaker Roar",
+      "effect_type": "war_cry",
+      "damage_scale": 0.55,
+      "speed_buff_scale": 0.35,
+      "duration_seconds": 6.0
+    },
+    {
+      "id": "bogreaver_slash",
+      "name": "Bogreaver Slash",
+      "effect_type": "single_target_burst",
+      "damage_scale": 2.0
+    },
+    {
+      "id": "verdant_array",
+      "name": "Verdant Array",
+      "effect_type": "rune_barrage",
+      "damage_scale": 0.95,
+      "target_count": 3,
+      "defense_break_scale": 0.28,
+      "duration_seconds": 6.0
+    },
+    {
+      "id": "moonwake_chorus",
+      "name": "Moonwake Chorus",
+      "effect_type": "team_heal_shield",
+      "heal_scale": 0.18,
+      "shield_scale": 0.2
+    },
+    {
+      "id": "grove_aegis",
+      "name": "Grove Aegis",
+      "effect_type": "frontline_bash",
+      "damage_scale": 1.18,
+      "shield_scale": 0.34,
+      "target_count": 2
+    },
+    {
+      "id": "stormglass_barrage",
+      "name": "Stormglass Barrage",
+      "effect_type": "backline_volley",
+      "damage_scale": 1.22,
+      "target_count": 3
+    },
+    {
+      "id": "sunflare_cataclysm",
+      "name": "Sunflare Cataclysm",
+      "effect_type": "all_enemy_blast",
+      "damage_scale": 1.34
+    },
+    {
+      "id": "eclipse_rite",
+      "name": "Eclipse Rite",
+      "effect_type": "team_heal_shield",
+      "heal_scale": 0.22,
+      "shield_scale": 0.18
+    },
+    {
+      "id": "cinder_lunge",
+      "name": "Cinder Lunge",
+      "effect_type": "single_target_burst",
+      "damage_scale": 1.9
+    },
+    {
+      "id": "sepulcher_guard",
+      "name": "Sepulcher Guard",
+      "effect_type": "frontline_bash",
+      "damage_scale": 1.1,
+      "shield_scale": 0.3,
+      "target_count": 2
+    },
+    {
+      "id": "riptide_volley",
+      "name": "Riptide Volley",
+      "effect_type": "backline_volley",
+      "damage_scale": 1.08,
+      "target_count": 3
+    },
+    {
+      "id": "ashen_prophecy",
+      "name": "Ashen Prophecy",
+      "effect_type": "all_enemy_blast",
+      "damage_scale": 1.16
+    },
+    {
+      "id": "bogbreaker_sweep",
+      "name": "Bogbreaker Sweep",
+      "effect_type": "sweeping_arc",
+      "damage_scale": 1.05,
+      "target_count": 3
+    },
+    {
+      "id": "squall_barrage",
+      "name": "Squall Barrage",
+      "effect_type": "backline_volley",
+      "damage_scale": 1.18,
+      "target_count": 3
+    }
+  ]
+}

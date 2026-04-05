@@ -1,0 +1,14 @@
+{
+  "id": "sunforge_lyra",
+  "name": "Sunforge Lyra",
+  "rarity": "Legendary",
+  "role": "Mage",
+  "faction": "Solaris",
+  "base_stats": { "hp": 1048, "attack": 160, "defense": 56, "speed": 101 },
+  "growth": { "hp": 98, "attack": 13, "defense": 5, "speed": 2 },
+  "ultimate_id": "sunflare_cataclysm",
+  "ultimate_name": "Sunflare Cataclysm",
+  "ultimate_description": "Unleashes a chained sunburst that detonates across the full enemy formation.",
+  "portrait": { "glyph": "SL", "accent": "#F1B64E" },
+  "lore": "A battlefield artificer who tempers sunlight into unstable sigils and controlled collapse."
+}

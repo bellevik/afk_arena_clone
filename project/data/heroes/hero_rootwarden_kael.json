@@ -1,0 +1,14 @@
+{
+  "id": "rootwarden_kael",
+  "name": "Rootwarden Kael",
+  "rarity": "Elite",
+  "role": "Tank",
+  "faction": "Verdant Circle",
+  "base_stats": { "hp": 1635, "attack": 112, "defense": 102, "speed": 86 },
+  "growth": { "hp": 156, "attack": 9, "defense": 9, "speed": 1 },
+  "ultimate_id": "grove_aegis",
+  "ultimate_name": "Grove Aegis",
+  "ultimate_description": "Raises a barkbound wall, then drives it through the frontline while wrapping himself in living shieldwood.",
+  "portrait": { "glyph": "RK", "accent": "#6BA15D" },
+  "lore": "An ancient warden who answers siege lines with roots, stone, and patient force."
+}

@@ -6,12 +6,27 @@ const SCREEN_DEFINITIONS := {
 	"main_menu": {
 		"scene": "res://project/scenes/menus/main_menu_screen.tscn",
 		"title": "Shardfall Legends",
-		"subtitle": "Phase 4 build with authored heroes, formation setup, and deterministic battle simulation.",
+		"subtitle": "Phase 21 build with premium summon currencies, live-event milestone rewards, and event-exclusive stage variants.",
 	},
 	"heroes": {
 		"scene": "res://project/scenes/heroes/hero_roster_screen.tscn",
 		"title": "Heroes",
-		"subtitle": "Browse the current owned roster and inspect authored hero definitions.",
+		"subtitle": "Inspect heroes, merge duplicate copies into ascension tiers, level them up, and manage equipped gear.",
+	},
+	"summon": {
+		"scene": "res://project/scenes/summon/summon_screen.tscn",
+		"title": "Summon",
+		"subtitle": "Exchange premium shards into banner-specific tokens, spend those tokens on pulls, and bank duplicates as merge copies.",
+	},
+	"quests": {
+		"scene": "res://project/scenes/quests/quest_board_screen.tscn",
+		"title": "Quests",
+		"subtitle": "Track milestone, daily, and weekly objectives tied to campaign wins, AFK claims, summons, and hero growth.",
+	},
+	"events": {
+		"scene": "res://project/scenes/events/event_screen.tscn",
+		"title": "Events",
+		"subtitle": "Progress a live reward track, clear event-exclusive stages, and route into the linked summon banner from one event hub.",
 	},
 	"formation": {
 		"scene": "res://project/scenes/battle/formation_screen.tscn",
@@ -19,30 +34,24 @@ const SCREEN_DEFINITIONS := {
 		"subtitle": "Assign the active five-hero team for later battle phases.",
 	},
 	"campaign": {
-		"scene": "res://project/scenes/menus/placeholder_screen.tscn",
+		"scene": "res://project/scenes/campaign/campaign_screen.tscn",
 		"title": "Campaign",
-		"subtitle": "Stage progression arrives after the battle core is in place.",
-		"body": "Phase 4 now provides the deterministic battle foundation that campaign stages will call into. Phase 6 will add actual stage definitions, unlock flow, and battle launch from stage data.",
-		"status": "Phase 1 placeholder: routed and testable.",
+		"subtitle": "Select unlocked stages, launch battles, and push through the expanded sample campaign.",
 	},
 	"battle": {
 		"scene": "res://project/scenes/battle/battle_screen.tscn",
 		"title": "Battle",
-		"subtitle": "Run the active formation through a deterministic real-time auto-battle test encounter.",
+		"subtitle": "Run the active formation through a deterministic auto-battle with energy, hero ultimates, and enemy ultimates.",
 	},
 	"rewards": {
-		"scene": "res://project/scenes/menus/placeholder_screen.tscn",
+		"scene": "res://project/scenes/rewards/rewards_screen.tscn",
 		"title": "Rewards",
-		"subtitle": "Reward collection and AFK loops arrive in later phases.",
-		"body": "The shell already includes the rewards destination so currencies, post-battle payouts, and idle collection can be added without changing top-level flow.",
-		"status": "Phase 1 placeholder: routed and testable.",
+		"subtitle": "Collect post-battle rewards, inspect balances, and claim AFK income.",
 	},
 	"settings": {
-		"scene": "res://project/scenes/menus/placeholder_screen.tscn",
+		"scene": "res://project/scenes/settings/settings_screen.tscn",
 		"title": "Settings",
-		"subtitle": "Player-facing options and platform tuning come later.",
-		"body": "This screen will later host audio, graphics, account, and debug-friendly tuning options. For now it validates scene routing and layout behavior.",
-		"status": "Phase 1 placeholder: routed and testable.",
+		"subtitle": "Tune interface feedback, adjust audio preferences, and manage save data without opening the debug overlay.",
 	},
 }
 

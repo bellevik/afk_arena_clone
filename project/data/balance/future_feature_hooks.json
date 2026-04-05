@@ -1,0 +1,54 @@
+{
+  "features": [
+    {
+      "id": "summoning",
+      "name": "Summoning Banners",
+      "status": "Live Prototype",
+      "primary_surface": "Home and future banner route",
+      "planned_route": "summon",
+      "save_domain": "summoning",
+      "depends_on": ["GameData", "RewardState", "ProfileState", "SaveState"],
+      "notes": "Now routes to a playable summon screen with premium shard exchange, banner-specific currencies, pity tracking, and duplicate-copy merge growth layered on top of the roster model."
+    },
+    {
+      "id": "guilds",
+      "name": "Guilds",
+      "status": "Hooked",
+      "primary_surface": "Home social panel",
+      "planned_route": "guild_hall",
+      "save_domain": "guild",
+      "depends_on": ["ProfileState", "CampaignState", "SaveState"],
+      "notes": "Reserved for async cooperative progression, contribution logs, and shared boss state layered on top of existing player power and campaign progress."
+    },
+    {
+      "id": "events",
+      "name": "Limited Events",
+      "status": "Live Prototype",
+      "primary_surface": "Home event rail and event route",
+      "planned_route": "events",
+      "save_domain": "events",
+      "depends_on": ["GameData", "RewardState", "QuestState", "SummonState", "SaveState"],
+      "notes": "Now routes to a playable limited-time event screen with point sources, milestone claims, event-exclusive stages, save-backed progression, and a linked summon-banner handoff."
+    },
+    {
+      "id": "pvp",
+      "name": "PvP Ladder",
+      "status": "Hooked",
+      "primary_surface": "Battle menu extension",
+      "planned_route": "pvp_ladder",
+      "save_domain": "pvp",
+      "depends_on": ["FormationState", "ProfileState", "SaveState"],
+      "notes": "Uses the same five-slot formation payloads and battle summaries so asynchronous defense snapshots can plug into the current combat pipeline."
+    },
+    {
+      "id": "quests",
+      "name": "Quest Board",
+      "status": "Live Prototype",
+      "primary_surface": "Rewards and home progression strip",
+      "planned_route": "quests",
+      "save_domain": "quests",
+      "depends_on": ["CampaignState", "RewardState", "ProfileState", "SummonState", "SaveState"],
+      "notes": "Now routes to a playable milestone board that tracks battle wins, stage clears, AFK claims, hero upgrades, and summons through explicit gameplay signals."
+    }
+  ]
+}

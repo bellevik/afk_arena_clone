@@ -133,6 +133,86 @@ size_flags_horizontal = 3
 autowrap_mode = 3
 text = ""
 
+[node name="ProgressionPanel" type="PanelContainer" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack"]
+
+[node name="ProgressionMargin" type="MarginContainer" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack/ProgressionPanel"]
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 14
+
+[node name="ProgressionStack" type="VBoxContainer" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack/ProgressionPanel/ProgressionMargin"]
+theme_override_constants/separation = 10
+
+[node name="BalanceLabel" type="Label" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack/ProgressionPanel/ProgressionMargin/ProgressionStack"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+autowrap_mode = 3
+text = ""
+
+[node name="AscensionLabel" type="Label" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack/ProgressionPanel/ProgressionMargin/ProgressionStack"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+autowrap_mode = 3
+text = ""
+
+[node name="UpgradePreviewLabel" type="Label" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack/ProgressionPanel/ProgressionMargin/ProgressionStack"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+autowrap_mode = 3
+text = ""
+
+[node name="UpgradeStatusLabel" type="Label" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack/ProgressionPanel/ProgressionMargin/ProgressionStack"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+autowrap_mode = 3
+text = ""
+
+[node name="LevelUpButton" type="Button" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack/ProgressionPanel/ProgressionMargin/ProgressionStack"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 90)
+size_flags_horizontal = 3
+text = "Level Up"
+
+[node name="AscendButton" type="Button" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack/ProgressionPanel/ProgressionMargin/ProgressionStack"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 90)
+size_flags_horizontal = 3
+text = "Ascend"
+
+[node name="EquipmentPanel" type="PanelContainer" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack"]
+
+[node name="EquipmentMargin" type="MarginContainer" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack/EquipmentPanel"]
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 14
+
+[node name="EquipmentStack" type="VBoxContainer" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack/EquipmentPanel/EquipmentMargin"]
+theme_override_constants/separation = 10
+
+[node name="EquipmentBonusLabel" type="Label" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack/EquipmentPanel/EquipmentMargin/EquipmentStack"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+autowrap_mode = 3
+text = ""
+
+[node name="EquipmentSlotsLabel" type="Label" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack/EquipmentPanel/EquipmentMargin/EquipmentStack"]
+text = "Equipped Items"
+
+[node name="EquipmentSlotList" type="VBoxContainer" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack/EquipmentPanel/EquipmentMargin/EquipmentStack"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="InventoryLabel" type="Label" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack/EquipmentPanel/EquipmentMargin/EquipmentStack"]
+text = "Inventory"
+
+[node name="InventoryList" type="VBoxContainer" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack/EquipmentPanel/EquipmentMargin/EquipmentStack"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
 [node name="UltimatePanel" type="PanelContainer" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack"]
 
 [node name="UltimateMargin" type="MarginContainer" parent="Margin/Stack/DetailPanel/DetailMargin/DetailStack/UltimatePanel"]

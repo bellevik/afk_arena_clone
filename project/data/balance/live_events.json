@@ -1,0 +1,216 @@
+{
+  "default_event_id": "emberwake_festival",
+  "events": [
+    {
+      "id": "emberwake_festival",
+      "name": "Emberwake Festival",
+      "description": "A live rally built around fast progression, bonus recruit momentum, and milestone rewards that feed back into the summon economy.",
+      "status": "Live Prototype",
+      "start_unix": 1704067200,
+      "end_unix": 1893456000,
+      "linked_banner_id": "astral_convergence",
+      "point_sources": [
+        {
+          "event_type": "stage_clear",
+          "label": "Campaign stage clear",
+          "points": 40
+        },
+        {
+          "event_type": "summon_pull",
+          "label": "Banner recruit pull",
+          "points": 8
+        },
+        {
+          "event_type": "afk_claim",
+          "label": "AFK claim",
+          "points": 25
+        },
+        {
+          "event_type": "quest_claim",
+          "label": "Quest claim",
+          "points": 30
+        },
+        {
+          "event_type": "event_stage_clear",
+          "label": "Event stage clear",
+          "points": 60
+        }
+      ],
+      "stages": [
+        {
+          "id": "emberwake_stage_01",
+          "name": "Cinder Gate",
+          "description": "Scout the outer ruins and break the first ember line before the rally collapses.",
+          "recommended_power": 16500,
+          "duration_seconds": 60,
+          "modifiers": [
+            {
+              "id": "rallying_flame",
+              "label": "Rallying Flame",
+              "description": "Allied attack rises by 12% for this stage.",
+              "effect_type": "stat_scale",
+              "target_team": "player",
+              "stat": "attack",
+              "multiplier": 1.12
+            },
+            {
+              "id": "ashen_bulk",
+              "label": "Ashen Bulk",
+              "description": "Enemy frontline health rises by 8%.",
+              "effect_type": "stat_scale",
+              "target_team": "enemy",
+              "stat": "hp",
+              "multiplier": 1.08
+            },
+            {
+              "id": "opening_beat",
+              "label": "Opening Beat",
+              "description": "Allied heroes begin with 180 bonus energy.",
+              "effect_type": "starting_energy",
+              "target_team": "player",
+              "amount": 180
+            }
+          ],
+          "enemy_team": [
+            {"slot_id": "front_left", "enemy_id": "ember_husk", "level": 11},
+            {"slot_id": "front_right", "enemy_id": "bog_shambler", "level": 11},
+            {"slot_id": "back_left", "enemy_id": "tide_scout", "level": 11},
+            {"slot_id": "back_center", "enemy_id": "ashen_seer", "level": 11},
+            {"slot_id": "back_right", "enemy_id": "storm_lancer", "level": 11}
+          ],
+          "battle_rewards": {
+            "gold": 220,
+            "hero_xp": 150,
+            "premium_shards": 40
+          }
+        },
+        {
+          "id": "emberwake_stage_02",
+          "name": "Ash Procession",
+          "description": "Push into the procession route and stop the seers from feeding the pyre line.",
+          "recommended_power": 18200,
+          "duration_seconds": 65,
+          "modifiers": [
+            {
+              "id": "ritual_stride",
+              "label": "Ritual Stride",
+              "description": "Enemy speed rises by 10%.",
+              "effect_type": "stat_scale",
+              "target_team": "enemy",
+              "stat": "speed",
+              "multiplier": 1.10
+            },
+            {
+              "id": "warded_mail",
+              "label": "Warded Mail",
+              "description": "Allied defense rises by 14%.",
+              "effect_type": "stat_scale",
+              "target_team": "player",
+              "stat": "defense",
+              "multiplier": 1.14
+            }
+          ],
+          "enemy_team": [
+            {"slot_id": "front_left", "enemy_id": "grave_warden", "level": 12},
+            {"slot_id": "front_right", "enemy_id": "bog_shambler", "level": 12},
+            {"slot_id": "back_left", "enemy_id": "ember_husk", "level": 12},
+            {"slot_id": "back_center", "enemy_id": "ashen_seer", "level": 12},
+            {"slot_id": "back_right", "enemy_id": "storm_lancer", "level": 12}
+          ],
+          "battle_rewards": {
+            "gold": 260,
+            "hero_xp": 180,
+            "astral_sigil": 3
+          }
+        },
+        {
+          "id": "emberwake_stage_03",
+          "name": "Festival Pyre",
+          "description": "Break the core pyre guard and seize the banner cache before the emberwake ritual completes.",
+          "recommended_power": 20500,
+          "duration_seconds": 70,
+          "modifiers": [
+            {
+              "id": "pyre_fury",
+              "label": "Pyre Fury",
+              "description": "Enemy attack rises by 15%.",
+              "effect_type": "stat_scale",
+              "target_team": "enemy",
+              "stat": "attack",
+              "multiplier": 1.15
+            },
+            {
+              "id": "emberward_resolve",
+              "label": "Emberward Resolve",
+              "description": "Allied max HP rises by 10%.",
+              "effect_type": "stat_scale",
+              "target_team": "player",
+              "stat": "hp",
+              "multiplier": 1.10
+            },
+            {
+              "id": "stored_momentum",
+              "label": "Stored Momentum",
+              "description": "Allied heroes begin with 120 bonus energy.",
+              "effect_type": "starting_energy",
+              "target_team": "player",
+              "amount": 120
+            }
+          ],
+          "enemy_team": [
+            {"slot_id": "front_left", "enemy_id": "grave_warden", "level": 13},
+            {"slot_id": "front_right", "enemy_id": "storm_lancer", "level": 13},
+            {"slot_id": "back_left", "enemy_id": "ember_husk", "level": 13},
+            {"slot_id": "back_center", "enemy_id": "ashen_seer", "level": 13},
+            {"slot_id": "back_right", "enemy_id": "tide_scout", "level": 13}
+          ],
+          "battle_rewards": {
+            "gold": 320,
+            "hero_xp": 220,
+            "premium_shards": 60,
+            "astral_sigil": 5
+          }
+        }
+      ],
+      "milestones": [
+        {
+          "id": "emberwake_m1",
+          "name": "Spark Cache",
+          "target_points": 100,
+          "rewards": {
+            "premium_shards": 120,
+            "gold": 300
+          }
+        },
+        {
+          "id": "emberwake_m2",
+          "name": "Banner Fuel",
+          "target_points": 250,
+          "rewards": {
+            "astral_sigil": 8,
+            "hero_xp": 240
+          }
+        },
+        {
+          "id": "emberwake_m3",
+          "name": "Festival Tribute",
+          "target_points": 450,
+          "rewards": {
+            "premium_shards": 220,
+            "gold": 600,
+            "hero_xp": 420
+          }
+        },
+        {
+          "id": "emberwake_m4",
+          "name": "Grand Ignition",
+          "target_points": 700,
+          "rewards": {
+            "astral_sigil": 14,
+            "premium_shards": 320
+          }
+        }
+      ]
+    }
+  ]
+}

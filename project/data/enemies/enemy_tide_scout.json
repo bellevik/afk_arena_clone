@@ -5,6 +5,9 @@
   "faction": "Tideborn",
   "base_stats": { "hp": 1020, "attack": 146, "defense": 48, "speed": 106 },
   "growth": { "hp": 95, "attack": 13, "defense": 4, "speed": 2 },
+  "ultimate_id": "riptide_volley",
+  "ultimate_name": "Riptide Volley",
+  "ultimate_description": "Loose a fan of barbed shots that sweeps through exposed backliners.",
   "portrait": { "glyph": "TS", "accent": "#4598C4" },
   "notes": "Ranged enemy prototype for early stage composition data."
 }

@@ -1,0 +1,13 @@
+{
+  "id": "bog_shambler",
+  "name": "Bog Shambler",
+  "role": "Warrior",
+  "faction": "Verdant Circle",
+  "base_stats": { "hp": 1310, "attack": 124, "defense": 74, "speed": 90 },
+  "growth": { "hp": 122, "attack": 10, "defense": 6, "speed": 1 },
+  "ultimate_id": "bogbreaker_sweep",
+  "ultimate_name": "Bogbreaker Sweep",
+  "ultimate_description": "A mud-heavy sweep that crushes the first enemy ranks in a wide arc.",
+  "portrait": { "glyph": "BS", "accent": "#648C5B" },
+  "notes": "Bruiser enemy that sits between the fast ember units and heavy wardens."
+}

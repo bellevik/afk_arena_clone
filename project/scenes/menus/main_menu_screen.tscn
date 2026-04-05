@@ -53,11 +53,32 @@ theme_override_constants/margin_bottom = 20
 theme_override_constants/separation = 16
 
 [node name="ActionsHeader" type="Label" parent="Content/Stack/ActionsPanel/ActionsMargin/ActionsStack"]
-text = "Phase 1 quick routes"
+text = "Core Routes"
 
 [node name="ActionGrid" type="GridContainer" parent="Content/Stack/ActionsPanel/ActionsMargin/ActionsStack"]
 unique_name_in_owner = true
-columns = 2
+columns = 1
+
+[node name="ExpansionPanel" type="PanelContainer" parent="Content/Stack"]
+
+[node name="ExpansionMargin" type="MarginContainer" parent="Content/Stack/ExpansionPanel"]
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ExpansionStack" type="VBoxContainer" parent="Content/Stack/ExpansionPanel/ExpansionMargin"]
+theme_override_constants/separation = 14
+
+[node name="ContentFootprintLabel" type="Label" parent="Content/Stack/ExpansionPanel/ExpansionMargin/ExpansionStack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
+
+[node name="FutureHooksLabel" type="Label" parent="Content/Stack/ExpansionPanel/ExpansionMargin/ExpansionStack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
 
 [node name="NotesPanel" type="PanelContainer" parent="Content/Stack"]
 
@@ -68,5 +89,6 @@ theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
 [node name="NotesLabel" type="Label" parent="Content/Stack/NotesPanel/NotesMargin"]
+unique_name_in_owner = true
 autowrap_mode = 3
-text = "This app shell is intentionally narrow in scope. It exists to lock in portrait framing, scene flow, and debug access before hero data, formations, combat, rewards, and persistence land in later phases."
+text = "Use the main routes above to move through the prototype loop: improve heroes, adjust formation, push campaign, run battles, and collect rewards. The portrait shell stays intentionally focused so the same framing works on both mobile and desktop."

@@ -61,6 +61,11 @@ unique_name_in_owner = true
 autowrap_mode = 3
 text = ""
 
+[node name="SaveStatusLabel" type="Label" parent="CenterContainer/DebugCard/Padding/Stack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
+
 [node name="ActionRow" type="HBoxContainer" parent="CenterContainer/DebugCard/Padding/Stack"]
 theme_override_constants/separation = 12
 
@@ -75,6 +80,60 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 84)
 size_flags_horizontal = 3
 text = "Cycle Screen"
+
+[node name="SaveRow" type="HBoxContainer" parent="CenterContainer/DebugCard/Padding/Stack"]
+theme_override_constants/separation = 12
+
+[node name="SaveButton" type="Button" parent="CenterContainer/DebugCard/Padding/Stack/SaveRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 84)
+size_flags_horizontal = 3
+text = "Save"
+
+[node name="ReloadButton" type="Button" parent="CenterContainer/DebugCard/Padding/Stack/SaveRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 84)
+size_flags_horizontal = 3
+text = "Reload Save"
+
+[node name="ResetSaveButton" type="Button" parent="CenterContainer/DebugCard/Padding/Stack/SaveRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 84)
+size_flags_horizontal = 3
+text = "Reset Save"
+
+[node name="DebugActionsLabel" type="Label" parent="CenterContainer/DebugCard/Padding/Stack"]
+text = "Progression shortcuts"
+
+[node name="DebugActionRow" type="HBoxContainer" parent="CenterContainer/DebugCard/Padding/Stack"]
+theme_override_constants/separation = 12
+
+[node name="GrantResourcesButton" type="Button" parent="CenterContainer/DebugCard/Padding/Stack/DebugActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 84)
+size_flags_horizontal = 3
+text = "+5000 Resources"
+
+[node name="UnlockStagesButton" type="Button" parent="CenterContainer/DebugCard/Padding/Stack/DebugActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 84)
+size_flags_horizontal = 3
+text = "Unlock All Stages"
+
+[node name="CapHeroesButton" type="Button" parent="CenterContainer/DebugCard/Padding/Stack/DebugActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 84)
+size_flags_horizontal = 3
+text = "Cap All Heroes"
+
+[node name="EventActionRow" type="HBoxContainer" parent="CenterContainer/DebugCard/Padding/Stack"]
+theme_override_constants/separation = 12
+
+[node name="GrantEventButton" type="Button" parent="CenterContainer/DebugCard/Padding/Stack/EventActionRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 84)
+size_flags_horizontal = 3
+text = "+150 Event Pts"
 
 [node name="JumpLabel" type="Label" parent="CenterContainer/DebugCard/Padding/Stack"]
 text = "Jump to screen"

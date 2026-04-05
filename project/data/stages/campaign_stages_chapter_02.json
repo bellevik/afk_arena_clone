@@ -1,0 +1,184 @@
+{
+  "stages": [
+    {
+      "id": "chapter_02_stage_01",
+      "name": "2-1 Storm Approach",
+      "chapter": 2,
+      "index": 1,
+      "recommended_power": 11400,
+      "duration_seconds": 70,
+      "description": "Sky Dominion raiders test the chapter opening with layered speed and ranged pressure.",
+      "battle_rewards": { "gold": 384, "hero_xp": 254 },
+      "afk_hourly": { "gold": 276, "hero_xp": 166 },
+      "enemy_team": [
+        { "slot_id": "front_left", "enemy_id": "grave_warden", "level": 5 },
+        { "slot_id": "front_right", "enemy_id": "bog_shambler", "level": 4 },
+        { "slot_id": "back_left", "enemy_id": "storm_lancer", "level": 4 },
+        { "slot_id": "back_center", "enemy_id": "storm_lancer", "level": 4 },
+        { "slot_id": "back_right", "enemy_id": "tide_scout", "level": 5 }
+      ]
+    },
+    {
+      "id": "chapter_02_stage_02",
+      "name": "2-2 Furnace Span",
+      "chapter": 2,
+      "index": 2,
+      "recommended_power": 12100,
+      "duration_seconds": 70,
+      "description": "Ember Court seers feed the bridgehead while melee raiders break for the center.",
+      "battle_rewards": { "gold": 422, "hero_xp": 278 },
+      "afk_hourly": { "gold": 304, "hero_xp": 182 },
+      "enemy_team": [
+        { "slot_id": "front_left", "enemy_id": "ember_husk", "level": 5 },
+        { "slot_id": "front_right", "enemy_id": "bog_shambler", "level": 5 },
+        { "slot_id": "back_left", "enemy_id": "ashen_seer", "level": 4 },
+        { "slot_id": "back_center", "enemy_id": "storm_lancer", "level": 4 },
+        { "slot_id": "back_right", "enemy_id": "ashen_seer", "level": 4 }
+      ]
+    },
+    {
+      "id": "chapter_02_stage_03",
+      "name": "2-3 Drowned Steps",
+      "chapter": 2,
+      "index": 3,
+      "recommended_power": 12850,
+      "duration_seconds": 72,
+      "description": "Tideborn pressure returns with faster rotations and heavier crossfire.",
+      "battle_rewards": { "gold": 462, "hero_xp": 304 },
+      "afk_hourly": { "gold": 332, "hero_xp": 199 },
+      "enemy_team": [
+        { "slot_id": "front_left", "enemy_id": "grave_warden", "level": 5 },
+        { "slot_id": "front_right", "enemy_id": "ember_husk", "level": 5 },
+        { "slot_id": "back_left", "enemy_id": "tide_scout", "level": 5 },
+        { "slot_id": "back_center", "enemy_id": "storm_lancer", "level": 5 },
+        { "slot_id": "back_right", "enemy_id": "tide_scout", "level": 5 }
+      ]
+    },
+    {
+      "id": "chapter_02_stage_04",
+      "name": "2-4 Wither Gate",
+      "chapter": 2,
+      "index": 4,
+      "recommended_power": 13650,
+      "duration_seconds": 72,
+      "description": "Verdant berserkers grind through the gate while seers threaten the backline.",
+      "battle_rewards": { "gold": 504, "hero_xp": 332 },
+      "afk_hourly": { "gold": 362, "hero_xp": 217 },
+      "enemy_team": [
+        { "slot_id": "front_left", "enemy_id": "bog_shambler", "level": 6 },
+        { "slot_id": "front_right", "enemy_id": "grave_warden", "level": 5 },
+        { "slot_id": "back_left", "enemy_id": "ashen_seer", "level": 5 },
+        { "slot_id": "back_center", "enemy_id": "ember_husk", "level": 5 },
+        { "slot_id": "back_right", "enemy_id": "storm_lancer", "level": 5 }
+      ]
+    },
+    {
+      "id": "chapter_02_stage_05",
+      "name": "2-5 Gale Relay",
+      "chapter": 2,
+      "index": 5,
+      "recommended_power": 14500,
+      "duration_seconds": 74,
+      "description": "The enemy uses pure speed, forcing ultimates to matter before the second rotation.",
+      "battle_rewards": { "gold": 548, "hero_xp": 360 },
+      "afk_hourly": { "gold": 394, "hero_xp": 236 },
+      "enemy_team": [
+        { "slot_id": "front_left", "enemy_id": "ember_husk", "level": 6 },
+        { "slot_id": "front_right", "enemy_id": "bog_shambler", "level": 6 },
+        { "slot_id": "back_left", "enemy_id": "storm_lancer", "level": 6 },
+        { "slot_id": "back_center", "enemy_id": "storm_lancer", "level": 6 },
+        { "slot_id": "back_right", "enemy_id": "ashen_seer", "level": 5 }
+      ]
+    },
+    {
+      "id": "chapter_02_stage_06",
+      "name": "2-6 Cinder Flats",
+      "chapter": 2,
+      "index": 6,
+      "recommended_power": 15380,
+      "duration_seconds": 74,
+      "description": "Ash and steel lock the frontline in place while enemy mages punish any stall.",
+      "battle_rewards": { "gold": 594, "hero_xp": 390 },
+      "afk_hourly": { "gold": 427, "hero_xp": 256 },
+      "enemy_team": [
+        { "slot_id": "front_left", "enemy_id": "grave_warden", "level": 6 },
+        { "slot_id": "front_right", "enemy_id": "ember_husk", "level": 6 },
+        { "slot_id": "back_left", "enemy_id": "ashen_seer", "level": 6 },
+        { "slot_id": "back_center", "enemy_id": "ashen_seer", "level": 5 },
+        { "slot_id": "back_right", "enemy_id": "tide_scout", "level": 6 }
+      ]
+    },
+    {
+      "id": "chapter_02_stage_07",
+      "name": "2-7 Hollow Bastion",
+      "chapter": 2,
+      "index": 7,
+      "recommended_power": 16280,
+      "duration_seconds": 76,
+      "description": "Twin wardens and a bruiser wall demand either burst or sustained support cycling.",
+      "battle_rewards": { "gold": 642, "hero_xp": 422 },
+      "afk_hourly": { "gold": 462, "hero_xp": 277 },
+      "enemy_team": [
+        { "slot_id": "front_left", "enemy_id": "grave_warden", "level": 7 },
+        { "slot_id": "front_right", "enemy_id": "bog_shambler", "level": 6 },
+        { "slot_id": "back_left", "enemy_id": "storm_lancer", "level": 6 },
+        { "slot_id": "back_center", "enemy_id": "ashen_seer", "level": 6 },
+        { "slot_id": "back_right", "enemy_id": "tide_scout", "level": 6 }
+      ]
+    },
+    {
+      "id": "chapter_02_stage_08",
+      "name": "2-8 Rift Moor",
+      "chapter": 2,
+      "index": 8,
+      "recommended_power": 17180,
+      "duration_seconds": 78,
+      "description": "A mixed-line ambush uses every lane and rewards well-timed defensive ultimates.",
+      "battle_rewards": { "gold": 692, "hero_xp": 456 },
+      "afk_hourly": { "gold": 498, "hero_xp": 299 },
+      "enemy_team": [
+        { "slot_id": "front_left", "enemy_id": "bog_shambler", "level": 7 },
+        { "slot_id": "front_right", "enemy_id": "grave_warden", "level": 7 },
+        { "slot_id": "back_left", "enemy_id": "storm_lancer", "level": 7 },
+        { "slot_id": "back_center", "enemy_id": "ashen_seer", "level": 6 },
+        { "slot_id": "back_right", "enemy_id": "ember_husk", "level": 7 }
+      ]
+    },
+    {
+      "id": "chapter_02_stage_09",
+      "name": "2-9 Tempest Verge",
+      "chapter": 2,
+      "index": 9,
+      "recommended_power": 18150,
+      "duration_seconds": 80,
+      "description": "The penultimate stage leans into fast backline collapses and punishes weak support cycles.",
+      "battle_rewards": { "gold": 744, "hero_xp": 490 },
+      "afk_hourly": { "gold": 536, "hero_xp": 322 },
+      "enemy_team": [
+        { "slot_id": "front_left", "enemy_id": "ember_husk", "level": 7 },
+        { "slot_id": "front_right", "enemy_id": "bog_shambler", "level": 7 },
+        { "slot_id": "back_left", "enemy_id": "storm_lancer", "level": 7 },
+        { "slot_id": "back_center", "enemy_id": "storm_lancer", "level": 7 },
+        { "slot_id": "back_right", "enemy_id": "ashen_seer", "level": 7 }
+      ]
+    },
+    {
+      "id": "chapter_02_stage_10",
+      "name": "2-10 Skybreak Redoubt",
+      "chapter": 2,
+      "index": 10,
+      "recommended_power": 19200,
+      "duration_seconds": 80,
+      "description": "A full mixed-arms outpost closes the sample campaign with speed, pressure, and a durable core.",
+      "battle_rewards": { "gold": 800, "hero_xp": 526 },
+      "afk_hourly": { "gold": 576, "hero_xp": 346 },
+      "enemy_team": [
+        { "slot_id": "front_left", "enemy_id": "grave_warden", "level": 8 },
+        { "slot_id": "front_right", "enemy_id": "bog_shambler", "level": 8 },
+        { "slot_id": "back_left", "enemy_id": "storm_lancer", "level": 8 },
+        { "slot_id": "back_center", "enemy_id": "ashen_seer", "level": 8 },
+        { "slot_id": "back_right", "enemy_id": "tide_scout", "level": 8 }
+      ]
+    }
+  ]
+}

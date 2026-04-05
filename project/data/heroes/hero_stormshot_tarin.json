@@ -1,0 +1,14 @@
+{
+  "id": "stormshot_tarin",
+  "name": "Stormshot Tarin",
+  "rarity": "Elite",
+  "role": "Ranger",
+  "faction": "Sky Dominion",
+  "base_stats": { "hp": 1100, "attack": 149, "defense": 58, "speed": 105 },
+  "growth": { "hp": 100, "attack": 12, "defense": 5, "speed": 2 },
+  "ultimate_id": "stormglass_barrage",
+  "ultimate_name": "Stormglass Barrage",
+  "ultimate_description": "Shatters charged bolts across the enemy backline in rapid succession.",
+  "portrait": { "glyph": "ST", "accent": "#68C5DD" },
+  "lore": "A skydock marksman who calibrates every shot around wind pressure and panic."
+}

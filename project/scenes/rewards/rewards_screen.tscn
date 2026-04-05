@@ -1,0 +1,118 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://project/scripts/ui/rewards_screen.gd" id="1"]
+
+[node name="RewardsScreen" type="ScrollContainer"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+script = ExtResource("1")
+
+[node name="Content" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(960, 0)
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Stack" type="VBoxContainer" parent="Content"]
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="BalancePanel" type="PanelContainer" parent="Content/Stack"]
+
+[node name="BalanceMargin" type="MarginContainer" parent="Content/Stack/BalancePanel"]
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="BalanceStack" type="VBoxContainer" parent="Content/Stack/BalancePanel/BalanceMargin"]
+theme_override_constants/separation = 10
+
+[node name="BalanceTitle" type="Label" parent="Content/Stack/BalancePanel/BalanceMargin/BalanceStack"]
+text = "Account Resources"
+
+[node name="BalanceLabel" type="Label" parent="Content/Stack/BalancePanel/BalanceMargin/BalanceStack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
+
+[node name="AfkPanel" type="PanelContainer" parent="Content/Stack"]
+
+[node name="AfkMargin" type="MarginContainer" parent="Content/Stack/AfkPanel"]
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="AfkStack" type="VBoxContainer" parent="Content/Stack/AfkPanel/AfkMargin"]
+theme_override_constants/separation = 12
+
+[node name="AfkTitle" type="Label" parent="Content/Stack/AfkPanel/AfkMargin/AfkStack"]
+text = "AFK Rewards"
+
+[node name="AfkLabel" type="Label" parent="Content/Stack/AfkPanel/AfkMargin/AfkStack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
+
+[node name="AfkButtonRow" type="HBoxContainer" parent="Content/Stack/AfkPanel/AfkMargin/AfkStack"]
+theme_override_constants/separation = 12
+
+[node name="ClaimButton" type="Button" parent="Content/Stack/AfkPanel/AfkMargin/AfkStack/AfkButtonRow"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 96)
+text = "Claim AFK Rewards"
+
+[node name="RefreshButton" type="Button" parent="Content/Stack/AfkPanel/AfkMargin/AfkStack/AfkButtonRow"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 96)
+text = "Refresh"
+
+[node name="SimulateButton" type="Button" parent="Content/Stack/AfkPanel/AfkMargin/AfkStack/AfkButtonRow"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 96)
+text = "Debug +2h AFK"
+
+[node name="BattleRewardPanel" type="PanelContainer" parent="Content/Stack"]
+
+[node name="BattleRewardMargin" type="MarginContainer" parent="Content/Stack/BattleRewardPanel"]
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="BattleRewardStack" type="VBoxContainer" parent="Content/Stack/BattleRewardPanel/BattleRewardMargin"]
+theme_override_constants/separation = 10
+
+[node name="BattleRewardTitle" type="Label" parent="Content/Stack/BattleRewardPanel/BattleRewardMargin/BattleRewardStack"]
+text = "Last Battle Rewards"
+
+[node name="BattleRewardLabel" type="Label" parent="Content/Stack/BattleRewardPanel/BattleRewardMargin/BattleRewardStack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
+
+[node name="AfkClaimPanel" type="PanelContainer" parent="Content/Stack"]
+
+[node name="AfkClaimMargin" type="MarginContainer" parent="Content/Stack/AfkClaimPanel"]
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="AfkClaimStack" type="VBoxContainer" parent="Content/Stack/AfkClaimPanel/AfkClaimMargin"]
+theme_override_constants/separation = 10
+
+[node name="AfkClaimTitle" type="Label" parent="Content/Stack/AfkClaimPanel/AfkClaimMargin/AfkClaimStack"]
+text = "Last AFK Claim"
+
+[node name="AfkClaimLabel" type="Label" parent="Content/Stack/AfkClaimPanel/AfkClaimMargin/AfkClaimStack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""

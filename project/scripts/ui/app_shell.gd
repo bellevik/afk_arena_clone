@@ -11,6 +11,7 @@ const NAV_ITEMS := [
 
 var _current_screen: Control
 var _nav_buttons: Dictionary = {}
+var _transition_tween: Tween
 
 @onready var screen_title_label: Label = %ScreenTitleLabel
 @onready var screen_subtitle_label: Label = %ScreenSubtitleLabel
@@ -18,6 +19,7 @@ var _nav_buttons: Dictionary = {}
 @onready var nav_bar: HBoxContainer = %NavBar
 @onready var debug_button: Button = %DebugButton
 @onready var debug_overlay: Control = %DebugOverlay
+@onready var transition_overlay: ColorRect = %TransitionOverlay
 
 
 func _ready() -> void:
@@ -44,10 +46,13 @@ func show_screen(screen_id: String, scene_resource: PackedScene, metadata: Dicti
 	if screen_instance.has_method("configure"):
 		screen_instance.configure(metadata)
 
+	screen_instance.modulate = Color(1, 1, 1, 0)
 	screen_host.add_child(screen_instance)
 	_current_screen = screen_instance
+	ThemeManager.wire_button_feedback(screen_instance)
 	_update_header(metadata)
 	_refresh_navigation(screen_id)
+	_play_screen_transition(screen_instance)
 
 
 func _show_initial_screen() -> void:
@@ -70,6 +75,8 @@ func _build_navigation() -> void:
 		nav_bar.add_child(button)
 		_nav_buttons[screen_id] = button
 
+	ThemeManager.wire_button_feedback(nav_bar)
+
 
 func _update_header(metadata: Dictionary) -> void:
 	screen_title_label.text = String(metadata.get("title", AppState.GAME_TITLE))
@@ -87,3 +94,26 @@ func _refresh_navigation(active_screen_id: String) -> void:
 func _on_debug_menu_toggled(is_open: bool) -> void:
 	debug_overlay.visible = is_open
 
+
+func _play_screen_transition(screen_instance: Control) -> void:
+	if _transition_tween != null:
+		_transition_tween.kill()
+
+	if SettingsState.transitions_enabled() == false:
+		transition_overlay.visible = false
+		transition_overlay.modulate.a = 0.0
+		screen_instance.modulate = Color.WHITE
+		return
+
+	transition_overlay.visible = true
+	transition_overlay.modulate.a = 0.0
+	screen_instance.modulate.a = 0.0
+
+	_transition_tween = create_tween()
+	_transition_tween.tween_property(transition_overlay, "modulate:a", 0.24, 0.05)
+	_transition_tween.parallel().tween_property(screen_instance, "modulate:a", 1.0, 0.18)
+	_transition_tween.tween_property(transition_overlay, "modulate:a", 0.0, 0.12)
+	_transition_tween.finished.connect(func() -> void:
+		if is_instance_valid(transition_overlay):
+			transition_overlay.visible = false
+	)

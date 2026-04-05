@@ -24,6 +24,12 @@ var _metadata: Dictionary = {}
 var _speed_index := 0
 var _time_accumulator := 0.0
 var _setup_note := ""
+var _effect_banner_timer := 0.0
+var _active_battle_source := "test"
+var _active_stage_id := ""
+var _active_event_id := ""
+var _reported_campaign_result := false
+var _reported_battle_rewards := false
 
 @onready var encounter_title_label: Label = %EncounterTitleLabel
 @onready var battle_state_label: Label = %BattleStateLabel
@@ -31,8 +37,11 @@ var _setup_note := ""
 @onready var restart_button: Button = %RestartButton
 @onready var speed_button: Button = %SpeedButton
 @onready var formation_button: Button = %FormationButton
+@onready var effect_banner_panel: PanelContainer = %EffectBannerPanel
+@onready var effect_banner_label: Label = %EffectBannerLabel
 @onready var timer_label: Label = %TimerLabel
 @onready var determinism_label: Label = %DeterminismLabel
+@onready var modifier_summary_label: Label = %ModifierSummaryLabel
 @onready var arena_rows: VBoxContainer = %ArenaRows
 @onready var result_panel: PanelContainer = %ResultPanel
 @onready var result_label: Label = %ResultLabel
@@ -56,13 +65,19 @@ func configure(metadata: Dictionary) -> void:
 
 
 func _process(delta: float) -> void:
+	if _effect_banner_timer > 0.0:
+		_effect_banner_timer = maxf(0.0, _effect_banner_timer - delta)
+		if _effect_banner_timer <= 0.0:
+			effect_banner_panel.visible = false
+
 	if _simulator == null or _simulator.is_finished():
 		return
 
 	_time_accumulator += delta * float(SPEED_OPTIONS[_speed_index])
 	while _time_accumulator >= FIXED_STEP_SECONDS:
 		_time_accumulator -= FIXED_STEP_SECONDS
-		_simulator.step(FIXED_STEP_SECONDS)
+		var events: Array[Dictionary] = _simulator.step(FIXED_STEP_SECONDS)
+		_consume_events(events)
 		_refresh_battle_view()
 		if _simulator.is_finished():
 			break
@@ -83,17 +98,64 @@ func debug_snapshot() -> Dictionary:
 
 func _prepare_and_start_battle() -> void:
 	_setup_note = ""
+	_effect_banner_timer = 0.0
+	effect_banner_panel.visible = false
+	_reported_campaign_result = false
+	_reported_battle_rewards = false
 	if FormationState.assigned_count() == 0:
 		FormationState.auto_fill()
 		_setup_note = "No formation was assigned, so the battle screen auto-filled the current team for testing."
 
-	_encounter = _battle_builder.default_battle_encounter()
+	var stage_battle: Dictionary = EventState.pending_battle_definition()
+	if stage_battle.is_empty() and _active_battle_source == "event_stage" and _active_stage_id.is_empty() == false:
+		var event_stage: Dictionary = GameData.get_live_event_stage(_active_stage_id)
+		if event_stage.is_empty() == false:
+			stage_battle = {
+				"battle_id": String(event_stage.get("stage_id", "")),
+				"display_name": String(event_stage.get("display_name", "")),
+				"description": String(event_stage.get("description", "")),
+				"duration_seconds": float(event_stage.get("duration_seconds", 60.0)),
+				"modifiers": event_stage.get("modifiers", []).duplicate(true),
+				"enemy_team": event_stage.get("enemy_team", []).duplicate(true),
+				"source_type": "event_stage",
+				"source_path": String(event_stage.get("source_path", "")),
+			}
+
+	if stage_battle.is_empty():
+		stage_battle = CampaignState.pending_battle_definition()
+	if stage_battle.is_empty() and _active_battle_source == "campaign_stage" and _active_stage_id.is_empty() == false:
+		var stage: Dictionary = GameData.get_stage(_active_stage_id)
+		if stage.is_empty() == false:
+			stage_battle = {
+				"battle_id": String(stage.get("stage_id", "")),
+				"display_name": String(stage.get("display_name", "")),
+				"description": String(stage.get("description", "")),
+				"duration_seconds": float(stage.get("duration_seconds", 60.0)),
+				"enemy_team": stage.get("enemy_team", []).duplicate(true),
+				"source_type": "campaign_stage",
+				"source_path": String(stage.get("source_path", "")),
+			}
+
+	if stage_battle.is_empty() == false:
+		_encounter = stage_battle
+		_active_battle_source = String(stage_battle.get("source_type", "campaign_stage"))
+		_active_stage_id = String(stage_battle.get("battle_id", ""))
+		_active_event_id = String(GameData.get_live_event_stage(_active_stage_id).get("event_id", ""))
+	else:
+		_encounter = _battle_builder.default_battle_encounter()
+		_active_battle_source = "test"
+		_active_stage_id = ""
+		_active_event_id = ""
+
 	if _encounter.is_empty():
 		_show_load_error("No battle encounter data is available.")
 		return
 
-	var player_units: Array[Dictionary] = _battle_builder.build_player_team_from_formation()
-	var enemy_units: Array[Dictionary] = _battle_builder.build_enemy_team_from_encounter(_encounter)
+	var battle_context := {
+		"modifiers": _encounter.get("modifiers", []).duplicate(true),
+	}
+	var player_units: Array[Dictionary] = _battle_builder.build_player_team_from_formation(battle_context)
+	var enemy_units: Array[Dictionary] = _battle_builder.build_enemy_team_from_encounter(_encounter, battle_context)
 	if player_units.is_empty():
 		_show_load_error("The active formation has no heroes assigned.")
 		return
@@ -190,16 +252,30 @@ func _refresh_battle_view() -> void:
 		_simulator.team_alive_count(BattleSimulatorScript.TEAM_PLAYER),
 		_simulator.team_alive_count(BattleSimulatorScript.TEAM_ENEMY),
 	]
-	determinism_label.text = "Deterministic Phase 4 battle. No crit RNG, dodge RNG, or seed variance yet."
+	determinism_label.text = "Deterministic battle. Energy, shields, heals, hero ultimates, and enemy ultimates are active. No crit RNG, dodge RNG, or seed variance yet."
+	var modifier_lines := GameData.event_modifier_summary_lines(_encounter.get("modifiers", []))
+	if modifier_lines.is_empty():
+		modifier_summary_label.text = "Stage modifiers: none"
+	else:
+		modifier_summary_label.text = "Stage modifiers:\n%s" % "\n".join(modifier_lines)
 
 	result_panel.visible = _simulator.is_finished()
 	if _simulator.is_finished():
+		_report_battle_source_result_if_needed()
+		var reward_snapshot := _report_battle_rewards_if_needed()
 		result_label.text = _simulator.result_label()
 		result_detail_label.text = "Result: %s  |  Winner: %s  |  Elapsed: %.1fs" % [
 			_simulator.result_state(),
 			_simulator.winner_team(),
 			snappedf(_simulator.elapsed_seconds(), 0.1),
 		]
+		if _simulator.skill_cast_count() > 0:
+			result_detail_label.text += "\nUltimates cast: %d  |  Healing: %d  |  Shields: %d" % [
+				_simulator.skill_cast_count(),
+				_simulator.healing_done(),
+				_simulator.shielding_done(),
+			]
+		result_detail_label.text += "\nRewards: %s" % _reward_summary(reward_snapshot)
 
 	combat_log.clear()
 	combat_log.append_text("\n".join(_simulator.combat_log()))
@@ -256,3 +332,72 @@ func _build_arena_rows() -> void:
 
 func _slot_host_key(team: String, slot_id: String) -> String:
 	return "%s:%s" % [team, slot_id]
+
+
+func _consume_events(events: Array[Dictionary]) -> void:
+	for event in events:
+		if String(event.get("type", "")) != "skill_cast":
+			continue
+		effect_banner_panel.visible = true
+		effect_banner_label.text = "%s used %s" % [
+			String(event.get("caster_name", "Unit")),
+			String(event.get("skill_name", "Ultimate")),
+		]
+		_effect_banner_timer = 1.2
+
+
+func _report_battle_source_result_if_needed() -> void:
+	if _reported_campaign_result:
+		return
+	if _active_stage_id.is_empty():
+		return
+	var victory: bool = _simulator.winner_team() == BattleSimulatorScript.TEAM_PLAYER
+	match _active_battle_source:
+		"campaign_stage":
+			CampaignState.report_battle_result(victory)
+		"event_stage":
+			EventState.report_battle_result(victory)
+	_reported_campaign_result = true
+
+
+func _report_battle_rewards_if_needed() -> Dictionary:
+	if _reported_battle_rewards:
+		return RewardState.last_battle_rewards()
+	if _simulator == null:
+		return {}
+
+	var rewards := RewardState.grant_battle_rewards(
+		_active_battle_source,
+		_active_stage_id,
+		_simulator.winner_team() == BattleSimulatorScript.TEAM_PLAYER
+	)
+	_reported_battle_rewards = true
+	return rewards
+
+
+func _reward_summary(rewards: Dictionary) -> String:
+	var parts: Array[String] = []
+	for resource_id in rewards.keys():
+		var key := String(resource_id)
+		if ["source_type", "stage_id", "source_label", "victory"].has(key):
+			continue
+		var amount := int(rewards.get(key, 0))
+		if amount <= 0:
+			continue
+		match key:
+			"gold":
+				parts.append("%d gold" % amount)
+			"hero_xp":
+				parts.append("%d hero XP" % amount)
+			"premium_shards":
+				parts.append("%d premium shards" % amount)
+			_:
+				parts.append("%d %s" % [amount, _resource_label(key)])
+	return " | ".join(parts)
+
+
+func _resource_label(resource_id: String) -> String:
+	for banner in GameData.get_all_summon_banners():
+		if String(banner.get("currency_id", "")) == resource_id:
+			return String(banner.get("currency_name", resource_id))
+	return resource_id

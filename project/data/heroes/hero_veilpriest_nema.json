@@ -1,0 +1,14 @@
+{
+  "id": "veilpriest_nema",
+  "name": "Veilpriest Nema",
+  "rarity": "Elite",
+  "role": "Support",
+  "faction": "Umbral",
+  "base_stats": { "hp": 1165, "attack": 128, "defense": 64, "speed": 97 },
+  "growth": { "hp": 106, "attack": 10, "defense": 5, "speed": 2 },
+  "ultimate_id": "eclipse_rite",
+  "ultimate_name": "Eclipse Rite",
+  "ultimate_description": "Folds allies beneath a twilight veil that restores health and hardens them against collapse.",
+  "portrait": { "glyph": "VN", "accent": "#8C7AC5" },
+  "lore": "A dusk cantor who keeps the living one step ahead of the grave's claim."
+}

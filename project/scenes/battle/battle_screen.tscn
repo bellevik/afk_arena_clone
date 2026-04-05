@@ -77,12 +77,32 @@ size_flags_horizontal = 3
 custom_minimum_size = Vector2(0, 92)
 text = "Open Formation"
 
+[node name="EffectBannerPanel" type="PanelContainer" parent="Content/Stack/ControlsPanel/ControlsMargin/ControlsStack"]
+unique_name_in_owner = true
+visible = false
+
+[node name="EffectBannerMargin" type="MarginContainer" parent="Content/Stack/ControlsPanel/ControlsMargin/ControlsStack/EffectBannerPanel"]
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 14
+
+[node name="EffectBannerLabel" type="Label" parent="Content/Stack/ControlsPanel/ControlsMargin/ControlsStack/EffectBannerPanel/EffectBannerMargin"]
+unique_name_in_owner = true
+horizontal_alignment = 1
+text = ""
+
 [node name="TimerLabel" type="Label" parent="Content/Stack/ControlsPanel/ControlsMargin/ControlsStack"]
 unique_name_in_owner = true
 autowrap_mode = 3
 text = ""
 
 [node name="DeterminismLabel" type="Label" parent="Content/Stack/ControlsPanel/ControlsMargin/ControlsStack"]
+unique_name_in_owner = true
+autowrap_mode = 3
+text = ""
+
+[node name="ModifierSummaryLabel" type="Label" parent="Content/Stack/ControlsPanel/ControlsMargin/ControlsStack"]
 unique_name_in_owner = true
 autowrap_mode = 3
 text = ""

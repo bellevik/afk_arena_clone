@@ -1,0 +1,13 @@
+{
+  "id": "ashen_seer",
+  "name": "Ashen Seer",
+  "role": "Mage",
+  "faction": "Ember Court",
+  "base_stats": { "hp": 1060, "attack": 148, "defense": 54, "speed": 100 },
+  "growth": { "hp": 98, "attack": 12, "defense": 4, "speed": 2 },
+  "ultimate_id": "ashen_prophecy",
+  "ultimate_name": "Ashen Prophecy",
+  "ultimate_description": "Calls a burning omen across the full enemy line, softening the entire formation at once.",
+  "portrait": { "glyph": "AS", "accent": "#C85E43" },
+  "notes": "Backline caster enemy used to widen Chapter 2 pressure patterns."
+}
